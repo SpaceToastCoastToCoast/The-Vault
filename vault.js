@@ -5,7 +5,7 @@ module.exports = function() {
     let key;
     let value;
     return {
-      getValue : function(k){
+      getValue : function(k) {
         if(k === undefined) {
           return null;
         } else if (k === key) {
@@ -13,8 +13,10 @@ module.exports = function() {
         }
         return null;
       },
-      setValue : function(k, v){
-
+      setValue : function(k, v) {
+        key = k;
+        value = v;
+        return this.getValue(k);
       }
     };
   })();
